@@ -23,7 +23,7 @@ Mở tệp `index.html` của bài bằng trình duyệt (bấm đúp tệp, kh�
 | Session 02, Bài 1: Bảng công việc | `session-02/bai-1-bang-cong-viec-giao-dien` |
 | Session 02, Bài 2: Thêm và lọc công việc | `session-02/bai-2-them-va-loc-cong-viec` |
 | Session 02, Bài 3: Widget thời tiết | `session-02/bai-3-widget-thoi-tiet-open-meteo` |
-| Session 02, Bài 4: Công việc với json-server | `session-02/bai-4-cong-viec-voi-json-server` |
+| Session 02, Bài 4: Công việc với API crudcrud | `session-02/bai-4-cong-viec-voi-api-crudcrud` |
 | Session 02, Bài 5: Task Hub nhiều trang và đăng nhập | `session-02/bai-5-task-hub-nhieu-trang-va-dang-nhap` |
 | Session 02, Bài 6: Bảng điều khiển Task Hub | `session-02/bai-6-bang-dieu-khien-task-hub` |
 

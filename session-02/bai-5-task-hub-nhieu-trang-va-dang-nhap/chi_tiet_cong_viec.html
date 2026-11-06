@@ -29,15 +29,15 @@
   <!-- Component: TaskCard (src/components/TaskCard.jsx) -->
   <article class="card mb-3">
     <div class="card-body">
-      <h3 class="card-title h6">Sửa lỗi hiển thị bảng giá trên Safari</h3>
+      <h3 class="card-title h6">Chuẩn bị buổi phỏng vấn ứng viên frontend</h3>
       <p class="mb-1">
         <!-- Component: PriorityBadge (src/components/PriorityBadge.jsx) -->
-        <span class="badge text-bg-warning">Trung bình</span>
+        <span class="badge text-bg-danger">Cao</span>
         <!-- Hết: PriorityBadge -->
         <span>Trạng thái: Cần làm</span>
       </p>
-      <p class="mb-1">Người nhận: <a href="ho_so_nhan_vien.html">Lý Tuấn Anh</a></p>
-      <p class="mb-0 text-body-secondary">Hạn: 12/11/2026</p>
+      <p class="mb-1">Người nhận: <a href="ho_so_nhan_vien.html">Trần Thị Bình</a></p>
+      <p class="mb-0 text-body-secondary">Hạn: 09/11/2026</p>
     </div>
   </article>
   <!-- Hết: TaskCard -->
@@ -71,10 +71,13 @@
     <div class="alert alert-danger" role="alert">Không cập nhật được công việc: Máy chủ đang gặp sự cố, hãy thử lại sau.</div>
 
   <h2 class="h5 text-secondary border-bottom pb-2 mt-5">Không tìm thấy công việc</h2>
-    <div class="alert alert-warning">Không tìm thấy công việc 999</div>
+    <div class="alert alert-warning">Không tìm thấy công việc CV99</div>
 
-  <h2 class="h5 text-secondary border-bottom pb-2 mt-5">Lỗi tải dữ liệu</h2>
-    <div class="alert alert-danger" role="alert">Không kết nối được máy chủ. Hãy kiểm tra bạn đã chạy npm run api.</div>
+  <h2 class="h5 text-secondary border-bottom pb-2 mt-5">Lỗi tải dữ liệu (có nút Thử lại)</h2>
+    <div>
+      <div class="alert alert-danger" role="alert">Không kết nối được máy chủ. Hãy kiểm tra mạng; nếu vẫn lỗi, endpoint crudcrud có thể đã hết hạn mức hoặc hết hạn.</div>
+      <button type="button" class="btn btn-outline-danger btn-sm">Thử lại</button>
+    </div>
 </div>
 </body>
 </html>

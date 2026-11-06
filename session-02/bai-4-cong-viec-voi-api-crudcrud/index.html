@@ -9,7 +9,7 @@
   <body>
     <!--
       Giao diện mẫu của Bài 4 (HTML thuần + Bootstrap 5.3.3). Mở bằng cách bấm đúp tệp này.
-      Dữ liệu trong mẫu là dữ liệu cứng; ứng dụng thật lấy dữ liệu từ json-server.
+      Dữ liệu trong mẫu là dữ liệu cứng; ứng dụng thật lấy dữ liệu từ crudcrud.com.
       Cách đọc:
         - Khối "Component: TaskManager" là phần BẠN chuyển sang JSX (tệp src/components/TaskManager.jsx).
           Các chú thích "Trạng thái:" trong phần "Bảng trạng thái" là các nhánh của chính TaskManager.
@@ -42,9 +42,10 @@
               <label for="task-assignee" class="form-label">Người nhận</label>
               <select id="task-assignee" class="form-select">
                 <option value="">Chưa giao</option>
-                <option value="1">Nguyễn Văn An</option>
-                <option value="2">Trần Thị Bình</option>
-                <option value="3">Lê Hoàng Cường</option>
+                <option value="NV01">Nguyễn Văn An</option>
+                <option value="NV02">Trần Thị Bình</option>
+                <option value="NV03">Lê Hoàng Cường</option>
+                <option value="NV04">Phạm Thu Dung</option>
               </select>
             </div>
             <div class="col-md-4">
@@ -79,7 +80,7 @@
         </div>
         <!-- Hết: TaskFilters -->
 
-        <p class="text-body-secondary">Tìm thấy 30 công việc</p>
+        <p class="text-body-secondary">Tìm thấy 12 công việc</p>
 
         <ul class="list-group mb-3">
           <!-- Component: TaskRow (src/components/TaskRow.jsx) [mã nền] -->
@@ -102,16 +103,17 @@
           <!-- Hai dòng dưới cùng mẫu TaskRow, chỉ để minh họa nhiều dòng -->
           <li class="list-group-item d-flex flex-column flex-md-row justify-content-between gap-2">
             <div>
-              <h4 class="h6 mb-1">Sửa lỗi hiển thị bảng giá trên Safari</h4>
+              <h4 class="h6 mb-1">Chuẩn bị buổi phỏng vấn ứng viên frontend</h4>
               <div class="d-flex flex-wrap align-items-center gap-2">
-                <span class="badge text-bg-warning">Trung bình</span>
+                <span class="badge text-bg-danger">Cao</span>
                 <span class="small text-body-secondary">Trạng thái: Cần làm</span>
+                <span class="badge text-bg-danger">Quá hạn</span>
               </div>
-              <div class="small text-body-secondary">Người nhận: Lý Tuấn Anh | Hạn: 12/11/2026</div>
+              <div class="small text-body-secondary">Người nhận: Trần Thị Bình | Hạn: 09/11/2026</div>
             </div>
             <div class="d-flex align-items-start gap-2">
               <button type="button" class="btn btn-sm btn-outline-primary">Bắt đầu</button>
-              <button type="button" class="btn btn-sm btn-outline-danger" aria-label="Xóa Sửa lỗi hiển thị bảng giá trên Safari">Xóa</button>
+              <button type="button" class="btn btn-sm btn-outline-danger" aria-label="Xóa Chuẩn bị buổi phỏng vấn ứng viên frontend">Xóa</button>
             </div>
           </li>
           <li class="list-group-item d-flex flex-column flex-md-row justify-content-between gap-2">
@@ -154,9 +156,11 @@
         <p class="mb-0">Đang tải công việc...</p>
       </div>
 
-      <h3 class="h6 mt-4">Trạng thái: tải lỗi (TaskManager)</h3>
+      <h3 class="h6 mt-4">Trạng thái: tải lỗi, kèm nút Thử lại (TaskManager)</h3>
       <div class="alert alert-danger" role="alert">Không tải được công việc: Máy chủ đang gặp sự cố, hãy thử lại sau.</div>
-      <div class="alert alert-danger" role="alert">Không tải được công việc: Không kết nối được máy chủ API. Hãy kiểm tra npm run api đã chạy chưa.</div>
+      <button type="button" class="btn btn-outline-primary mb-3">Thử lại</button>
+      <div class="alert alert-danger" role="alert">Không tải được công việc: Không kết nối được máy chủ API. Hãy kiểm tra mạng; nếu endpoint đã dùng quá 100 yêu cầu hoặc quá 24 giờ, hãy lấy endpoint mới ở crudcrud.com.</div>
+      <button type="button" class="btn btn-outline-primary mb-3">Thử lại</button>
 
       <h3 class="h6 mt-4">Trạng thái: danh sách rỗng (TaskManager)</h3>
       <p class="text-body-secondary">Tìm thấy 0 công việc</p>
@@ -171,24 +175,25 @@
       <div class="alert alert-success" role="status">Đã thêm công việc "Học Vitest".</div>
       <div class="alert alert-danger" role="alert">Không thêm được công việc "Học Vitest": Máy chủ đang gặp sự cố, hãy thử lại sau.</div>
       <div class="alert alert-danger" role="alert">Không cập nhật được công việc: Máy chủ đang gặp sự cố, hãy thử lại sau.</div>
+      <div class="alert alert-danger" role="alert">Không thêm được công việc "Học Vitest": Không kết nối được máy chủ API. Hãy kiểm tra mạng; nếu endpoint đã dùng quá 100 yêu cầu hoặc quá 24 giờ, hãy lấy endpoint mới ở crudcrud.com.</div>
       <div class="alert alert-danger" role="alert">Không xóa được công việc: Không tìm thấy dữ liệu.</div>
 
       <h3 class="h6 mt-4">Trạng thái: dòng đang bận, chờ máy chủ (TaskRow, mã nền)</h3>
       <ul class="list-group mb-3">
         <li class="list-group-item d-flex flex-column flex-md-row justify-content-between gap-2">
           <div>
-            <h4 class="h6 mb-1">Sửa lỗi hiển thị bảng giá trên Safari</h4>
+            <h4 class="h6 mb-1">Nâng cấp thư viện React lên bản ổn định</h4>
             <div class="d-flex flex-wrap align-items-center gap-2">
-              <span class="badge text-bg-warning">Trung bình</span>
+              <span class="badge text-bg-success">Thấp</span>
               <span class="small text-body-secondary">Trạng thái: Cần làm</span>
             </div>
-            <div class="small text-body-secondary">Người nhận: Chưa giao | Hạn: 12/11/2026</div>
+            <div class="small text-body-secondary">Người nhận: Đặng Quốc Huy | Hạn: 01/12/2026</div>
           </div>
           <div class="d-flex align-items-start gap-2">
             <button type="button" class="btn btn-sm btn-outline-primary" disabled>
               <span class="spinner-border spinner-border-sm me-1" aria-hidden="true"></span>Bắt đầu
             </button>
-            <button type="button" class="btn btn-sm btn-outline-danger" disabled aria-label="Xóa Sửa lỗi hiển thị bảng giá trên Safari">Xóa</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" disabled aria-label="Xóa Nâng cấp thư viện React lên bản ổn định">Xóa</button>
           </div>
         </li>
       </ul>

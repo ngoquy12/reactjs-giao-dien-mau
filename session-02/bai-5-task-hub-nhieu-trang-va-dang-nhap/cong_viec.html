@@ -40,14 +40,18 @@
       <label for="filter-assignee" class="form-label">Người nhận</label>
       <select id="filter-assignee" class="form-select">
         <option value="">Tất cả</option>
-        <option value="1">Nguyễn Văn An</option>
-        <option value="2">Trần Thị Bình</option>
-        <option value="3">Lê Hoàng Cường</option>
-        <option value="7">Đặng Quốc Huy</option>
+        <option value="NV01">Nguyễn Văn An</option>
+        <option value="NV02">Trần Thị Bình</option>
+        <option value="NV03">Lê Hoàng Cường</option>
+        <option value="NV04">Phạm Thu Dung</option>
+        <option value="NV05">Hoàng Minh Đức</option>
+        <option value="NV06">Vũ Ngọc Hà</option>
+        <option value="NV07">Đặng Quốc Huy</option>
+        <option value="NV08">Bùi Lan Khanh</option>
       </select>
     </div>
   </div>
-  <p class="text-body-secondary">Tổng: 30 công việc</p>
+  <p class="text-body-secondary">Tổng: 12 công việc</p>
   <ul class="list-unstyled" aria-label="Danh sách công việc">
     <li>
     <!-- Component: TaskCard (src/components/TaskCard.jsx) -->
@@ -87,8 +91,17 @@
     <p class="text-body-secondary">Tổng: 0 công việc</p>
     <div class="alert alert-secondary">Không có công việc nào.</div>
 
-  <h2 class="h5 text-secondary border-bottom pb-2 mt-5">Lỗi máy chủ</h2>
-    <div class="alert alert-danger" role="alert">Máy chủ đang gặp sự cố, hãy thử lại sau.</div>
+  <h2 class="h5 text-secondary border-bottom pb-2 mt-5">Lỗi máy chủ (có nút Thử lại)</h2>
+    <div>
+      <div class="alert alert-danger" role="alert">Máy chủ đang gặp sự cố, hãy thử lại sau.</div>
+      <button type="button" class="btn btn-outline-danger btn-sm">Thử lại</button>
+    </div>
+
+  <h2 class="h5 text-secondary border-bottom pb-2 mt-5">Mất kết nối hoặc hết hạn mức 100 yêu cầu (có nút Thử lại)</h2>
+    <div>
+      <div class="alert alert-danger" role="alert">Không kết nối được máy chủ. Hãy kiểm tra mạng; nếu vẫn lỗi, endpoint crudcrud có thể đã hết hạn mức hoặc hết hạn.</div>
+      <button type="button" class="btn btn-outline-danger btn-sm">Thử lại</button>
+    </div>
 
   <h2 class="h5 text-secondary border-bottom pb-2 mt-5">Trang đầu và trang cuối (nút bị vô hiệu)</h2>
     <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
